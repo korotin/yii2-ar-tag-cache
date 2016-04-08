@@ -10,8 +10,8 @@ services:
 
 install:
     - composer self-update
-    - composer global require "fxp/composer-asset-plugin:1.1.2"
-    - composer global require "codeception/codeception=2.0.*"
+    - composer global require "fxp/composer-asset-plugin:@stable"
+    - composer global require "codeception/codeception:@stable"
     - composer install --no-interaction --prefer-source
 
 before_script:

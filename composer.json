@@ -1,0 +1,21 @@
+{
+    "name": "herroffizier/yii2-ar-cache",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "keywords": ["yii", "yii2", "yii 2", "activerecord", "cache", "cache dependency", "cache tag", "tag dependency"],
+    "description": "Yii 2 component for automatic cache invalidation invoked by ActiveRecord updates.",
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "codeception/codeception": "*",
+        "phpunit/phpunit": "~4",
+        "squizlabs/php_codesniffer": "*",
+        "phing/phing": "*"
+    },
+    "autoload": {
+        "psr-4": {"herroffizier\\yii2arcache\\tests\\": "tests/", "herroffizier\\yii2arcache\\": "src/"}
+    }
+}

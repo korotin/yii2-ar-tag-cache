@@ -1,6 +1,6 @@
 <?php
 
-namespace herroffizier\yii2arcache\tests\codeception\_helpers;
+namespace herroffizier\yii2artc\tests\codeception\_helpers;
 
 class Model2 extends \yii\db\ActiveRecord
 {

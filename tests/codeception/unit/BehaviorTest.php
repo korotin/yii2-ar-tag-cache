@@ -1,17 +1,16 @@
 <?php
 /**
- * Yii2 AR Cache.
+ * Yii2 AR Tag Cache.
  *
- * This file contains AR cache behavior test class.
+ * This file contains behavior test class.
  *
  * @author  Aleksei Korotin <herr.offizier@gmail.com>
  */
-
-namespace herroffizier\yii2arcache\tests\codeception\unit;
+namespace herroffizier\yii2artc\tests\codeception\unit;
 
 use Yii;
 use yii\codeception\TestCase;
-use herroffizier\yii2arcache\tests\codeception\_helpers\Model1;
+use herroffizier\yii2artc\tests\codeception\_helpers\Model1;
 
 class BehaviorTest extends TestCase
 {
@@ -33,7 +32,7 @@ class BehaviorTest extends TestCase
     {
         $model = new Model1();
 
-        $cacheDependency = $model->cacheDependency;
+        $tagDependency = $model->tagDependency;
 
         $cacheWithDependencyId = md5(rand());
         $cacheWithoutDependencyId = md5(rand());
@@ -41,7 +40,7 @@ class BehaviorTest extends TestCase
 
         $this->assertFalse($cache->get($cacheWithDependencyId));
         $this->assertFalse($cache->get($cacheWithoutDependencyId));
-        $cache->set($cacheWithDependencyId, 'test', 0, $cacheDependency);
+        $cache->set($cacheWithDependencyId, 'test', 0, $tagDependency);
         $cache->set($cacheWithoutDependencyId, 'test', 0);
         $this->assertEquals('test', $cache->get($cacheWithDependencyId));
         $this->assertEquals('test', $cache->get($cacheWithoutDependencyId));
@@ -58,7 +57,7 @@ class BehaviorTest extends TestCase
 
         $this->assertTrue($model->save());
 
-        $cacheDependency = $model->cacheDependency;
+        $tagDependency = $model->tagDependency;
 
         $cacheWithDependencyId = md5(rand());
         $cacheWithoutDependencyId = md5(rand());
@@ -66,7 +65,7 @@ class BehaviorTest extends TestCase
 
         $this->assertFalse($cache->get($cacheWithDependencyId));
         $this->assertFalse($cache->get($cacheWithoutDependencyId));
-        $cache->set($cacheWithDependencyId, 'test', 0, $cacheDependency);
+        $cache->set($cacheWithDependencyId, 'test', 0, $tagDependency);
         $cache->set($cacheWithoutDependencyId, 'test', 0);
         $this->assertEquals('test', $cache->get($cacheWithDependencyId));
         $this->assertEquals('test', $cache->get($cacheWithoutDependencyId));
@@ -83,7 +82,7 @@ class BehaviorTest extends TestCase
 
         $this->assertTrue($model->save());
 
-        $cacheDependency = $model->cacheDependency;
+        $tagDependency = $model->tagDependency;
 
         $cacheWithDependencyId = md5(rand());
         $cacheWithoutDependencyId = md5(rand());
@@ -91,7 +90,7 @@ class BehaviorTest extends TestCase
 
         $this->assertFalse($cache->get($cacheWithDependencyId));
         $this->assertFalse($cache->get($cacheWithoutDependencyId));
-        $cache->set($cacheWithDependencyId, 'test', 0, $cacheDependency);
+        $cache->set($cacheWithDependencyId, 'test', 0, $tagDependency);
         $cache->set($cacheWithoutDependencyId, 'test', 0);
         $this->assertEquals('test', $cache->get($cacheWithDependencyId));
         $this->assertEquals('test', $cache->get($cacheWithoutDependencyId));

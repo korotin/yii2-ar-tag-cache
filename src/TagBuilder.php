@@ -1,13 +1,12 @@
 <?php
 /**
- * Yii2 AR Cache.
+ * Yii2 AR Tag Cache.
  *
  * This file contains helper class for tag building.
  *
  * @author  Aleksei Korotin <herr.offizier@gmail.com>
  */
-
-namespace herroffizier\yii2arcache;
+namespace herroffizier\yii2artc;
 
 use yii\base\InvalidConfigException;
 

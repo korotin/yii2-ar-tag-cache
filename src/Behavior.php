@@ -1,13 +1,12 @@
 <?php
 /**
- * Yii2 AR Cache.
+ * Yii2 AR Tag Cache.
  *
- * This file contains AR cache behavior class.
+ * This file contains behavior class.
  *
  * @author  Aleksei Korotin <herr.offizier@gmail.com>
  */
-
-namespace herroffizier\yii2arcache;
+namespace herroffizier\yii2artc;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -56,11 +55,11 @@ class Behavior extends \yii\base\Behavior
     }
 
     /**
-     * Get AR cache dependency for current model.
+     * Get tag dependency for current ActiveRecord class.
      *
      * @return Dependency
      */
-    public function getCacheDependency()
+    public function getTagDependency()
     {
         $tags = $this->getCacheTags();
 

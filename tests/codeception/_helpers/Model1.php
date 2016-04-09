@@ -1,8 +1,8 @@
 <?php
 
-namespace herroffizier\yii2arcache\tests\codeception\_helpers;
+namespace herroffizier\yii2artc\tests\codeception\_helpers;
 
-use herroffizier\yii2arcache\Behavior;
+use herroffizier\yii2artc\Behavior;
 
 class Model1 extends \yii\db\ActiveRecord
 {

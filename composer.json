@@ -1,5 +1,5 @@
 {
-    "name": "herroffizier/yii2-ar-cache",
+    "name": "herroffizier/yii2-ar-tag-cache",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "keywords": ["yii", "yii2", "yii 2", "activerecord", "cache", "cache dependency", "cache tag", "tag dependency"],
@@ -16,6 +16,6 @@
         "phing/phing": "*"
     },
     "autoload": {
-        "psr-4": {"herroffizier\\yii2arcache\\tests\\": "tests/", "herroffizier\\yii2arcache\\": "src/"}
+        "psr-4": {"herroffizier\\yii2artc\\tests\\": "tests/", "herroffizier\\yii2artc\\": "src/"}
     }
 }
